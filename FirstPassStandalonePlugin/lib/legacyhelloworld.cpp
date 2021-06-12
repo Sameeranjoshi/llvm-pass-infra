@@ -5,11 +5,10 @@ using namespace llvm;
 
 namespace {
 
-// This method implements what the pass does
-void visitor(llvm::Function &F) {
-    errs() << "(llvm-tutor) Hello from: "<< F.getName() << "\n";
-    errs() << "(llvm-tutor)   number of arguments: " << F.arg_size() << "\n";
-}
+  void visitor(Function &F){
+    errs() << "\n Function name is = " << F.getName();
+    errs() << "\n Function takes " << F.arg_size() << " arguments";
+  }
 
 // Legacy PM implementation
 struct LegacyHelloWorld : public FunctionPass {
