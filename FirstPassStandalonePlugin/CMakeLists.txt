@@ -67,8 +67,8 @@ endif()
 ########################################
 #TARGET CONFIG
 ########################################
-add_executable(helloworldexe ${CMAKE_CURRENT_SOURCE_DIR}/lib/helloworld.cpp)
-target_link_libraries(helloworldexe PRIVATE LLVMCore)
-target_include_directories(helloworldexe PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+add_executable(toolexe ${CMAKE_CURRENT_SOURCE_DIR}/lib/tool.cpp)
+target_link_libraries(toolexe PRIVATE LLVMCore LLVMSupport)
+target_include_directories(toolexe PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 add_subdirectory(lib)
